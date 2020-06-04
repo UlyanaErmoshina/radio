@@ -68,36 +68,52 @@ public class Radio {
         if (SoundVolume > MaxSoundVolume) {
             return;
         }
-            if (SoundVolume < MinSoundVolume) {
-                return;
-            }
-
-            this.SoundVolume = soundVolume;
+        if (SoundVolume < MinSoundVolume) {
+            return;
         }
 
-        public boolean isOn () {
-            return on;
-        }
-
-        public void setOn ( boolean on){
-            this.on = on;
-        }
-
-        public void increaseCurrentNumberStation () {
-            if (currentRadioStation >= MaxRadioStation) {
-                currentRadioStation = MinRadioStation;
-                return;
-            }
-            currentRadioStation++;
-        }
-        public void decreaseCurrentNumberStation() {
-            if (currentRadioStation <= MinRadioStation) {
-                currentRadioStation = MaxRadioStation;
-                return;
-            }
-            currentRadioStation--;
-        }
-
-
+        this.SoundVolume = soundVolume;
     }
+
+    public boolean isOn() {
+        return on;
+    }
+
+    public void setOn(boolean on) {
+        this.on = on;
+    }
+
+    public void increaseCurrentNumberStation() {
+        if (currentRadioStation >= MaxRadioStation) {
+            currentRadioStation = MinRadioStation;
+            return;
+        }
+        currentRadioStation++;
+    }
+
+    public void decreaseCurrentNumberStation() {
+        if (currentRadioStation <= MinRadioStation) {
+            currentRadioStation = MaxRadioStation;
+            return;
+        }
+        currentRadioStation--;
+    }
+
+    public void increaseSoundVolume() {
+        if (SoundVolume<=MinSoundVolume) {
+            return;
+        }
+    }
+
+    public void decreaseSoundVolume() {
+        if (SoundVolume >= MaxSoundVolume) {
+
+            return;
+        }
+    }
+}
+
+
+
+
 
