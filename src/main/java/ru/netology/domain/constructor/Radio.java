@@ -1,4 +1,4 @@
-package ru.netology.domain;
+package ru.netology.domain.constructor;
 
 public class Radio {
 
@@ -12,45 +12,7 @@ public class Radio {
     private int SoundVolume = 100;
     private int MinSoundVolume = 0;
     private int MaxSoundVolume = 100;
-
-    public Radio(int soundVolume, int minSoundVolume, int maxSoundVolume) {
-        SoundVolume = soundVolume;
-        MinSoundVolume = minSoundVolume;
-        MaxSoundVolume = maxSoundVolume;
-    }
-
-
-
-    public Radio(int quantityStation, int currentRadioStation, int minRadioStation, int maxRadioStation) {
-        this.quantityStation = quantityStation;
-        this.currentRadioStation = currentRadioStation;
-        MinRadioStation = minRadioStation;
-        MaxRadioStation = maxRadioStation;
-    }
-
-
-
-
-    public Radio() {
-    }
-
-
-
-    public Radio(String name, int quantityStation, int currentRadioStation, int minRadioStation, int maxRadioStation, int soundVolume, int minSoundVolume, int maxSoundVolume, boolean on) {
-        this.name = name;
-        this.quantityStation = quantityStation;
-        this.currentRadioStation = currentRadioStation;
-        MinRadioStation = minRadioStation;
-        MaxRadioStation = maxRadioStation;
-        SoundVolume = soundVolume;
-        MinSoundVolume = minSoundVolume;
-        MaxSoundVolume = maxSoundVolume;
-        this.on = on;
-    }
-
     private boolean on;
-
-
 
     public int getMinRadioStation() {
         return MinRadioStation;
