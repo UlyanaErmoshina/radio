@@ -64,18 +64,27 @@ class RadioTest {
 
     @Test
     void ShouldIncreaseNumberStation2() {
-        Radio radio = new Radio(11, 5, 1, 20);
+        Radio radio = new Radio(5, 1, 20);
         radio.increaseCurrentNumberStation();
         assertEquals(6, radio.getCurrentRadioStation());
     }
 
     @Test
     void ShouldDecreaseNumberStation2() {
-        Radio radio = new Radio(11, 5, 1, 20);
+        Radio radio = new Radio(5, 1, 20);
         radio.decreaseCurrentNumberStation();
         assertEquals(4, radio.getCurrentRadioStation());
 
     }
+
+     @Test
+     void ShouldSetCurrentNumberStation() {
+      Radio radio = new Radio (0,10);
+      radio.setCurrentRadioStation(5);
+      assertEquals(5,radio.getCurrentRadioStation());
+
+        }
+
     @Test
     void ShouldIncreaseSoundVolume2() {
         Radio radio = new Radio(50, 0, 100);
@@ -83,6 +92,7 @@ class RadioTest {
         assertEquals(51, radio.getSoundVolume());
 
     }
+
     @Test
     void ShouldDecreaseSoundVolume2() {
         Radio radio = new Radio(50, 0, 100);
@@ -90,6 +100,5 @@ class RadioTest {
         assertEquals(49, radio.getSoundVolume());
 
     }
-
 
 }
