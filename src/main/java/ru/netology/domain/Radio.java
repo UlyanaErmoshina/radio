@@ -9,7 +9,18 @@ public class Radio {
     private int soundVolume = 100;
     private int minSoundVolume = 0;
     private int maxSoundVolume = 100;
+    private boolean on;
 
+    public Radio(int currentRadioStation, int soundVolume, int minSoundVolume, int maxSoundVolume) {
+        this.currentRadioStation = currentRadioStation;
+        this.soundVolume = soundVolume;
+        this.minSoundVolume = minSoundVolume;
+        this.maxSoundVolume = maxSoundVolume;
+    }
+
+    public Radio(int currentRadioStation) {
+        this.currentRadioStation = currentRadioStation;
+    }
 
     public Radio(int currentRadioStation, int minRadioStation, int maxRadioStation) {
 
@@ -18,27 +29,10 @@ public class Radio {
         this.maxRadioStation = maxRadioStation;
     }
 
-    public Radio(int minRadioStation, int maxRadioStation) {
-        this.minRadioStation = minRadioStation;
-        this.maxRadioStation = maxRadioStation;
-    }
-
     public Radio() {
     }
 
-    public Radio(String name, int currentRadioStation, int minRadioStation, int maxRadioStation, int soundVolume, int minSoundVolume, int maxSoundVolume, boolean on) {
-        this.name = name;
 
-        this.currentRadioStation = currentRadioStation;
-        this.minRadioStation = minRadioStation;
-        this.maxRadioStation = maxRadioStation;
-        this.soundVolume = soundVolume;
-        this.minSoundVolume = minSoundVolume;
-        this.maxSoundVolume = maxSoundVolume;
-        this.on = on;
-    }
-
-    private boolean on;
 
 
     public int getMinRadioStation() {
