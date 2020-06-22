@@ -20,9 +20,15 @@ public class Radio {
     private int maxSoundVolume = 100;
     private boolean on;
 
-    public Radio(int minRadioStation, int maxRadioStation) {
-        this.minRadioStation = minRadioStation;
-        this.maxRadioStation = maxRadioStation;
+    public Radio(int currentRadioStation, int soundVolume, int minSoundVolume, int maxSoundVolume) {
+        this.currentRadioStation = currentRadioStation;
+        this.soundVolume = soundVolume;
+        this.minSoundVolume = minSoundVolume;
+        this.maxSoundVolume = maxSoundVolume;
+    }
+
+    public Radio(int currentRadioStation) {
+        this.currentRadioStation = currentRadioStation;
     }
 
     public Radio(int currentRadioStation, int minRadioStation, int maxRadioStation) {
