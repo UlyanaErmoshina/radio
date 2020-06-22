@@ -64,7 +64,7 @@ class RadioTest {
 
     @Test
     void ShouldIncreaseNumberStation2() {
-        Radio radio = new Radio(0, 0, 10);
+        Radio radio = new Radio(5, 0, 10);
         radio.increaseCurrentNumberStation();
         assertEquals(6, radio.getCurrentRadioStation());
     }
