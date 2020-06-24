@@ -82,7 +82,8 @@ public class Radio {
 
     public void setCurrentRadioStation(int currentRadioStation) {
 
-        this.currentRadioStation = 5;
+        this.currentRadioStation = currentRadioStation;
+
     }
 
     public int getSoundVolume() {
