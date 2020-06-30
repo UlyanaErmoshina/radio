@@ -6,57 +6,57 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
 
-//    @Test
-//    public void ShouldIncreaseNumberStation() {
-//        Radio radio = new Radio();
-//
-//        radio.increaseCurrentNumberStation();
-//
-//        int expected = 1;
-//        int actual = radio.getCurrentRadioStation();
-//
-//        assertEquals(expected, actual);
-//
-//    }
-//
-//    @Test
-//    public void ShouldDecreaseNumberStation() {
-//        Radio radio = new Radio();
-//
-//        radio.decreaseCurrentNumberStation();
-//
-//        int expected1 = 10;
-//        int actual1 = radio.getCurrentRadioStation();
-//
-//        assertEquals(expected1, actual1);
-//
-//    }
-//
-//    @Test
-//    public void ShouldIncreaseSoundVolume() {
-//        Radio radio = new Radio();
-//
-//        radio.increaseSoundVolume();
-//
-//        int expected = 100;
-//        int actual = radio.getSoundVolume();
-//
-//        assertEquals(expected, actual);
-//
-//    }
-//
-//    @Test
-//    public void ShouldDecreaseSoundVolume() {
-//        Radio radio = new Radio();
-//
-//        radio.decreaseSoundVolume();
-//
-//        int expected1 = 99;
-//        int actual1 = radio.getSoundVolume();
-//
-//        assertEquals(expected1, actual1);
-//
-//    }
+    @Test
+    public void ShouldIncreaseNumberStation() {
+       Radio radio = new Radio();
+
+        radio.increaseCurrentNumberStation();
+
+        int expected = 1;
+        int actual = radio.getCurrentRadioStation();
+
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void ShouldDecreaseNumberStation() {
+        Radio radio = new Radio();
+
+        radio.decreaseCurrentNumberStation();
+
+        int expected1 = 10;
+        int actual1 = radio.getCurrentRadioStation();
+
+        assertEquals(expected1, actual1);
+
+    }
+
+    @Test
+    public void ShouldIncreaseSoundVolume() {
+        Radio radio = new Radio();
+
+        radio.increaseSoundVolume();
+
+        int expected = 100;
+        int actual = radio.getSoundVolume();
+
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void ShouldDecreaseSoundVolume() {
+        Radio radio = new Radio();
+
+        radio.decreaseSoundVolume();
+
+        int expected1 = 99;
+        int actual1 = radio.getSoundVolume();
+
+        assertEquals(expected1, actual1);
+
+    }
 
 
     //Изменённые тесты:
@@ -128,4 +128,23 @@ class RadioTest {
 
     }
 
-}
+    @Test
+
+    void ShouldSetSoundVolume() {
+        Radio radio = new Radio(5, 100, 0, 100);
+        radio.setSoundVolume(100);
+        assertEquals(100, radio.getSoundVolume());
+
+    }
+    @Test
+
+    void ShouldSetSoundVolume2() {
+        Radio radio = new Radio(5, 0, 0, 100);
+        radio.setSoundVolume(0);
+        assertEquals(0, radio.getSoundVolume());
+
+    }
+
+    }
+
+

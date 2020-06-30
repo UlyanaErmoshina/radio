@@ -43,6 +43,12 @@ public class Radio {
     }
 
     public void setCurrentRadioStation(int currentRadioStation) {
+        if (this.currentRadioStation > maxRadioStation) {
+            return;
+        }
+        if (this.soundVolume < minRadioStation) {
+            return;
+        }
         this.currentRadioStation = currentRadioStation;
     }
 
