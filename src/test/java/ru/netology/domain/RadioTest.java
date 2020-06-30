@@ -68,6 +68,7 @@ class RadioTest {
         radio.increaseCurrentNumberStation();
         assertEquals(6, radio.getCurrentRadioStation());
     }
+
     @Test
     void CheckLimitMaxNumberStation2() {
         Radio radio = new Radio(11, 0, 10);
@@ -92,28 +93,39 @@ class RadioTest {
 
     }
 
-     @Test
-     void ShouldSetCurrentNumberStation() {
-      Radio radio = new Radio (0,0,10);
-      radio.setCurrentRadioStation(5);
-      assertEquals(5,radio.getCurrentRadioStation());
+    @Test
+    void ShouldSetCurrentNumberStation() {
+        Radio radio = new Radio(6, 0, 10);
+        radio.setCurrentRadioStation(11);
+        assertEquals(6, radio.getCurrentRadioStation());
 
     }
+
     @Test
     void ShouldSetCurrentNumberStation2() {
-        Radio radio = new Radio (6,0,10);
-        radio.setCurrentRadioStation(10);
-        assertEquals(10,radio.getCurrentRadioStation());
+        Radio radio = new Radio(6, 0, 10);
+        radio.setCurrentRadioStation(-1);
+        assertEquals(6, radio.getCurrentRadioStation());
 
     }
+
+    @Test
+    void ShouldSetCurrentNumberStation3() {
+        Radio radio = new Radio(6, 0, 10);
+        radio.setCurrentRadioStation(0);
+        assertEquals(0, radio.getCurrentRadioStation());
+
+    }
+
 
     @Test
     void ShouldIncreaseSoundVolume2() {
-        Radio radio = new Radio(0,50,0,100);
+        Radio radio = new Radio(0, 50, 0, 100);
         radio.increaseSoundVolume();
         assertEquals(51, radio.getSoundVolume());
 
     }
+
     @Test
     void CheckLimitMaxSoundVolume2() {
         Radio radio = new Radio(0, 100, 0, 100);
@@ -124,11 +136,12 @@ class RadioTest {
 
     @Test
     void ShouldDecreaseSoundVolume2() {
-        Radio radio = new Radio(0,50,0,100);
+        Radio radio = new Radio(0, 50, 0, 100);
         radio.decreaseSoundVolume();
         assertEquals(49, radio.getSoundVolume());
 
     }
+
     @Test
     void CheckLimitMinSoundVolume2() {
         Radio radio = new Radio(0, 0, 0, 100);
@@ -136,21 +149,30 @@ class RadioTest {
         assertEquals(0, radio.getSoundVolume());
 
     }
+
+
     @Test
     void ShouldSetSoundVolume() {
-        Radio radio = new Radio(0, 5, 0, 100);
-        radio.setSoundVolume(5);
-        assertEquals(5, radio.getSoundVolume());
-
-    }
-    @Test
-    void ShouldSetSoundVolume2() {
-        Radio radio = new Radio(0, 5, 0, 100);
-        radio.setSoundVolume(50);
+        Radio radio = new Radio(5, 50, 0, 100);
+        radio.setSoundVolume(101);
         assertEquals(50, radio.getSoundVolume());
 
     }
 
+    @Test
+    void ShouldSetSoundVolume2() {
+        Radio radio = new Radio(5, 50, 0, 100);
+        radio.setSoundVolume(0);
+        assertEquals(0, radio.getSoundVolume());
 
+    }
+
+    @Test
+    void ShouldSetSoundVolume3() {
+        Radio radio = new Radio(5, 50, 0, 100);
+        radio.setSoundVolume(-1);
+        assertEquals(50, radio.getSoundVolume());
+
+    }
 
 }
